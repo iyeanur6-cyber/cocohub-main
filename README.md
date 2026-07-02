@@ -3,12 +3,29 @@
 > Secure pet health records, medication reminders, QR scanning, and emergency SOS — powered by blockchain.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/DogStark/Cocohub-MobileApp/releases)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/cocohub-mobileapp/cocohub-main/releases)
 [![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android%20%7C%20Web-lightgrey)](https://cocohub.app)
 [![Built with Expo](https://img.shields.io/badge/built%20with-Expo-4630EB)](https://expo.dev)
 [![Stellar](https://img.shields.io/badge/blockchain-Stellar-00B4E2)](https://stellar.org)
+[![Bounties on GrantFox](https://img.shields.io/badge/bounties-GrantFox-6C3CF7)](https://grantfox.xyz)
+[![Contributors Welcome](https://img.shields.io/badge/contributors-welcome-brightgreen)](CONTRIBUTING.md)
 
 **Cocohub** is a full-stack mobile and web application for pet owners to securely manage their pets' medical records, medication schedules, vet appointments, and emergency contacts. Built with React Native and Expo, backed by a Node.js/PostgreSQL API, and anchored to the Stellar blockchain for tamper-proof record verification.
+
+---
+
+## 💰 Contribute & Earn XLM
+
+**Cocohub is an open-source project with paid bounties.** We pay contributors in XLM (Stellar Lumens) via [GrantFox](https://grantfox.xyz) smart escrow for bug fixes, features, tests, translations, and docs.
+
+| Bounty Size | Reward | Examples |
+|-------------|--------|---------|
+| 🟢 Small | 5–15 XLM | Bug fixes, docs, UI polish |
+| 🟡 Medium | 20–50 XLM | New features, translations, test suites |
+| 🔴 Large | 75–150 XLM | Soroban contracts, AI features, wearables |
+
+👉 **[View all open bounties →](BOUNTIES.md)**
+👉 **[How to contribute & get paid →](CONTRIBUTING.md)**
 
 ---
 
