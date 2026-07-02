@@ -3,14 +3,14 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 const FEATURES = [
-  { icon: '🔒', title: 'Blockchain-Verified Records', desc: 'Every medical record is anchored on the Stellar blockchain — tamper-proof and verifiable by any vet.' },
-  { icon: '💊', title: 'Medication Reminders', desc: 'Smart notifications for doses and refills. Never miss a medication with daily and weekly schedules.' },
+  { icon: '🔒', title: 'Blockchain-Verified Records', desc: 'Every medical record is anchored on the Stellar blockchain — tamper-proof and verifiable by any vet, anywhere, instantly.' },
+  { icon: '💊', title: 'Medication Reminders', desc: 'Smart notifications for doses and refills. Drug interaction detection. Refill tracking. Never miss a medication again.' },
   { icon: '📅', title: 'Appointment Management', desc: 'Book vet visits, detect scheduling conflicts, and sync to your device calendar automatically.' },
-  { icon: '🚨', title: 'Emergency SOS', desc: 'One-tap alert to emergency contacts with your live GPS location. 24/7, even offline.' },
-  { icon: '📊', title: 'Health Dashboard', desc: 'Visual health scoring, weight trends, and AI-powered predictive alerts based on your pet\'s vitals.' },
-  { icon: '📱', title: 'QR Code Scanner', desc: 'Instant pet identification — scan any Cocohub QR code to pull up records and vaccination history.' },
+  { icon: '🚨', title: 'Emergency SOS', desc: 'One-tap alert to emergency contacts with your live GPS location. Works even when offline.' },
+  { icon: '🩺', title: 'AI Symptom Checker', desc: 'Describe your pet\'s symptoms and get an instant urgency assessment, probable conditions, and next steps.' },
+  { icon: '📊', title: 'Health Dashboard', desc: 'Visual health scoring, weight trends, breed-specific insights, and AI-powered predictive alerts.' },
+  { icon: '📱', title: 'QR Code Scanner', desc: 'Scan any Cocohub QR code to instantly pull up records and vaccination history — no app needed on the vet\'s end.' },
   { icon: '🌐', title: 'Offline-First', desc: 'Full functionality without internet. Records sync automatically when connection is restored.' },
-  { icon: '🔐', title: 'Privacy-First', desc: 'AES-256 encryption, biometric login, and GDPR-compliant data handling. Your data stays yours.' },
 ];
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:8081';
@@ -39,6 +39,7 @@ export default function Home() {
           <div className={styles.navLinks}>
             <Link href="#features">Features</Link>
             <Link href="#how-it-works">How it works</Link>
+            <Link href="#waitlist">Get notified</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href={APP_URL} className={styles.navCta}>Open App →</Link>
           </div>
@@ -95,9 +96,9 @@ export default function Home() {
         <div className="container">
           <div className={styles.statsGrid}>
             {[
-              { num: '10+', label: 'Features' },
+              { num: '900M+', label: 'Pets worldwide' },
+              { num: '75+', label: 'App screens' },
               { num: 'AES-256', label: 'Encryption' },
-              { num: 'Stellar', label: 'Blockchain' },
               { num: 'Free', label: 'To start' },
             ].map((s) => (
               <div key={s.label} className={styles.statItem}>
@@ -105,6 +106,34 @@ export default function Home() {
                 <div className={styles.statLabel}>{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Waitlist ── */}
+      <section className={styles.waitlist} id="waitlist">
+        <div className="container">
+          <div className={styles.waitlistCard}>
+            <div className={styles.waitlistBadge}>🐾 Early Access</div>
+            <h2 className={styles.waitlistTitle}>Join the waitlist. Get notified when we launch.</h2>
+            <p className={styles.waitlistSub}>Be first in line for early access, exclusive features, and a free premium trial when the app launches on the App Store and Google Play.</p>
+            <form
+              className={styles.waitlistForm}
+              action="https://formspree.io/f/cocohub-waitlist"
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                className={styles.waitlistInput}
+              />
+              <button type="submit" className={styles.waitlistBtn}>
+                Notify me →
+              </button>
+            </form>
+            <p className={styles.waitlistNote}>No spam. Unsubscribe anytime. We hate spam too.</p>
           </div>
         </div>
       </section>

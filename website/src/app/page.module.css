@@ -271,3 +271,84 @@
   .ctaStore { width: 100%; max-width: 280px; }
   .ctaWeb { width: 100%; max-width: 280px; text-align: center; justify-content: center; }
 }
+
+/* ── Waitlist ─────────────────────────────────────────────────── */
+.waitlist {
+  padding: 64px 0;
+  background: var(--coco-surface);
+}
+.waitlistCard {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px 32px;
+  background: linear-gradient(135deg, rgba(200,133,74,0.08) 0%, rgba(76,175,80,0.08) 100%);
+  border: 1px solid var(--coco-border);
+  border-radius: 24px;
+}
+.waitlistBadge {
+  display: inline-block;
+  background: rgba(200,133,74,0.15);
+  color: var(--coco-accent);
+  border: 1px solid var(--coco-accent);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+.waitlistTitle {
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 800;
+  color: var(--coco-text);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.waitlistSub {
+  font-size: 15px;
+  color: var(--coco-sub);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.waitlistForm {
+  display: flex;
+  gap: 10px;
+  max-width: 440px;
+  margin: 0 auto 12px;
+}
+.waitlistInput {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--coco-border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--coco-text);
+  outline: none;
+}
+.waitlistInput:focus {
+  border-color: var(--coco-accent);
+}
+.waitlistInput::placeholder { color: var(--coco-sub); }
+.waitlistBtn {
+  background: var(--coco-accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.waitlistBtn:hover { opacity: 0.88; }
+.waitlistNote {
+  font-size: 12px;
+  color: var(--coco-sub);
+}
+@media (max-width: 480px) {
+  .waitlistForm { flex-direction: column; }
+  .waitlistBtn { width: 100%; }
+}
