@@ -10,6 +10,7 @@
 [![Open Issues](https://img.shields.io/github/issues/cocohub-mobileapp/cocohub-main)](https://github.com/cocohub-mobileapp/cocohub-main/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Bounties on GrantFox](https://img.shields.io/badge/bounties-GrantFox-6C3CF7)](https://grantfox.xyz)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://cocohub.app/app)
 
 ---
 
@@ -29,11 +30,20 @@ Records are verified on the **Stellar blockchain** (hashes only — no personal 
 
 ## 🎬 See it in action
 
-> **[▶ Watch the 60-second demo →](https://cocohub.app)**
+> **[▶ Try the web app live →](https://cocohub.app/app)** — use `owner1@example.com` / `Password123!`
 
-| Pet Health Dashboard | Medication Tracker | Emergency SOS | QR Record Share |
-|---|---|---|---|
-| Health score, weight chart, vitals | Dose logging, refill alerts, drug interactions | One-tap GPS alert to contacts | Instant blockchain-verified share |
+### App Screenshots
+
+<div align="center">
+
+| Dashboard | My Pets | Medication Tracker | Emergency SOS |
+|:---------:|:-------:|:-----------------:|:-------------:|
+| ![Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&q=80&fit=crop) | ![Pets](https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&q=80&fit=crop) | ![Meds](https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=300&q=80&fit=crop) | ![SOS](https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=300&q=80&fit=crop) |
+| Health score, weight chart, vitals | Pet profiles with breed insights | Dose logging + drug interactions | One-tap GPS to contacts |
+
+</div>
+
+> 📸 **Screenshots above are placeholders.** Real app screenshots coming with v1.0 launch. [Try the live web app →](https://cocohub.app/app)
 
 ---
 
@@ -62,13 +72,15 @@ Records are verified on the **Stellar blockchain** (hashes only — no personal 
 
 ## 🚀 Try it now — no install needed
 
-**Web app:** [app.cocohub.app](https://app.cocohub.app)
+**Web app:** [cocohub.app/app](https://cocohub.app/app)
 
 ```
 Test account:
 Email:    owner1@example.com
 Password: Password123!
 ```
+
+> The web app works in demo mode even without the backend running — you'll see real UI with sample data.
 
 Or run locally in 2 minutes — see [Quick Start](#-quick-start) below.
 
