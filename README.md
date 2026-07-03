@@ -32,32 +32,13 @@ Records are verified on the **Stellar blockchain** (hashes only — no personal 
 
 > **[▶ Try the web app live →](https://cocohub.app/app)** — use `owner1@example.com` / `Password123!`
 
-### App Screenshots
-
 <div align="center">
 
-<table>
-  <tr>
-    <td align="center"><b>🔐 Login</b></td>
-    <td align="center"><b>📊 Dashboard</b></td>
-    <td align="center"><b>🐾 My Pets</b></td>
-    <td align="center"><b>💊 Care</b></td>
-  </tr>
-  <tr>
-    <td><img src="website/public/screenshots/login.png" width="200" alt="Login screen" onerror="this.src='https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&q=80&fit=crop'" /></td>
-    <td><img src="website/public/screenshots/dashboard.png" width="200" alt="Dashboard" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=80&fit=crop'" /></td>
-    <td><img src="website/public/screenshots/pets.png" width="200" alt="My Pets" onerror="this.src='https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=200&q=80&fit=crop'" /></td>
-    <td><img src="website/public/screenshots/care.png" width="200" alt="Care screen" onerror="this.src='https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?w=200&q=80&fit=crop'" /></td>
-  </tr>
-  <tr>
-    <td>Secure login with biometrics</td>
-    <td>Health score, pets, activity</td>
-    <td>All pets with breed insights</td>
-    <td>Meds + vaccinations tracker</td>
-  </tr>
-</table>
-
-> 📸 Add real screenshots by following [`website/public/screenshots/README.md`](website/public/screenshots/README.md)
+![Cocohub App](website/public/screenshots/login.png)
+![Cocohub App](website/public/screenshots/dashboard.png)
+![Cocohub App](website/public/screenshots/pets.png)
+![Cocohub App](website/public/screenshots/care.png)
+![Cocohub App](website/public/screenshots/appointments.png)
 
 </div>
 
