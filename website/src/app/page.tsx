@@ -13,7 +13,7 @@ const FEATURES = [
   { icon: '🌐', title: 'Offline-First', desc: 'Everything works without internet. Records sync automatically when you reconnect.' },
 ];
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:8081';
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? '/app';
 
 // All pet-relevant photos — no barbershop, no unrelated content
 const PHOTOS = [
@@ -95,7 +95,7 @@ export default function Home() {
             <Link href="#waitlist">Get notified</Link>
             <Link href="/privacy">Privacy</Link>
           </div>
-          <Link href={APP_URL} className={styles.navCta} target="_blank" rel="noopener noreferrer">
+          <Link href={APP_URL} className={styles.navCta}>
             Open App →
           </Link>
         </div>
@@ -118,12 +118,7 @@ export default function Home() {
               vet appointments and emergency SOS in one place. Blockchain-verified. Free to start.
             </p>
             <div className={styles.heroCtas}>
-              <Link
-                href={APP_URL}
-                className={styles.ctaPrimary}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href={APP_URL} className={styles.ctaPrimary}>
                 🌐 Use Web App — Free
               </Link>
               <Link href="#waitlist" className={styles.ctaSecondary}>
@@ -313,7 +308,7 @@ export default function Home() {
             </form>
             <p className={styles.waitlistNote}>
               No spam. Unsubscribe anytime. Or &nbsp;
-              <a href={APP_URL} target="_blank" rel="noopener noreferrer" className={styles.waitlistWebLink}>
+              <a href={APP_URL} className={styles.waitlistWebLink}>
                 try the web app now →
               </a>
             </p>
@@ -330,12 +325,7 @@ export default function Home() {
               <h2 className={styles.downloadTitle}>Start protecting your pet&apos;s health today.</h2>
               <p className={styles.downloadSub}>Available on web now. iOS and Android coming soon.</p>
               <div className={styles.downloadCtas}>
-                <Link
-                  href={APP_URL}
-                  className={styles.ctaPrimary}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href={APP_URL} className={styles.ctaPrimary}>
                   🌐 Open Web App — Free
                 </Link>
                 <Link href="#waitlist" className={styles.ctaSecondary}>
@@ -372,7 +362,7 @@ export default function Home() {
               <div className={styles.footerColTitle}>Product</div>
               <Link href="#features">Features</Link>
               <Link href="#how-it-works">How it works</Link>
-              <a href={APP_URL} target="_blank" rel="noopener noreferrer">Web App</a>
+              <Link href={APP_URL}>Web App</Link>
             </div>
             <div className={styles.footerCol}>
               <div className={styles.footerColTitle}>Download</div>
