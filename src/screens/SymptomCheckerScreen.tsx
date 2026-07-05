@@ -1,13 +1,3 @@
-/**
- * SymptomCheckerScreen
- *
- * AI-powered symptom triage screen. The user describes their pet's symptoms
- * in plain text; the backend ML prediction service returns a probable condition,
- * urgency level, and recommended next actions.
- *
- * Surfaces the existing /api/predictions endpoint backed by mlPredictionService.
- */
-
 import React, { useState, useRef, useCallback } from 'react';
 import {
   ActivityIndicator,
@@ -27,12 +17,10 @@ import { usePetSelector } from '../components/GlobalPetSelector';
 import GlobalPetSelector from '../components/GlobalPetSelector';
 import apiClient from '../services/apiClient';
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-
 interface SymptomAnalysis {
   probableConditions: Array<{
     condition: string;
-    confidence: number; // 0–1
+    confidence: number;
     description: string;
   }>;
   urgency: 'low' | 'moderate' | 'high' | 'emergency';
@@ -55,8 +43,6 @@ const EXAMPLE_SYMPTOMS = [
   'Scratching ears constantly and shaking head',
   'Breathing faster than normal, panting a lot',
 ];
-
-// ─── Component ────────────────────────────────────────────────────────────────
 
 interface Props {
   onBack?: () => void;
@@ -98,7 +84,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
       );
       setResult(response.data?.data ?? null);
     } catch {
-      // Graceful fallback when backend ML service is unavailable
       Alert.alert(
         'Service unavailable',
         'The AI symptom checker is temporarily offline. Please contact your vet directly if you are concerned.',
@@ -120,7 +105,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
       style={[styles.container, { backgroundColor: colors.background }]}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
-      {/* Header */}
       {onBack && (
         <View style={[styles.header, { backgroundColor: colors.surface, borderBottomColor: colors.border }]}>
           <TouchableOpacity onPress={onBack} accessibilityRole="button" accessibilityLabel="Back">
@@ -135,10 +119,8 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
         contentContainerStyle={styles.scroll}
         keyboardShouldPersistTaps="handled"
       >
-        {/* Pet selector */}
         <GlobalPetSelector />
 
-        {/* Intro */}
         <View style={styles.intro}>
           <Text style={styles.introEmoji}>🩺</Text>
           <Text style={[styles.introTitle, { color: colors.text }]}>
@@ -149,7 +131,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
           </Text>
         </View>
 
-        {/* Symptom input */}
         <View style={[styles.inputCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <TextInput
             ref={inputRef}
@@ -168,7 +149,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
           </Text>
         </View>
 
-        {/* Example prompts */}
         {!symptoms && (
           <View style={styles.examples}>
             <Text style={[styles.examplesTitle, { color: colors.placeholder }]}>
@@ -188,7 +168,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
           </View>
         )}
 
-        {/* Analyse button */}
         <TouchableOpacity
           style={[
             styles.analyseBtn,
@@ -207,10 +186,8 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
           )}
         </TouchableOpacity>
 
-        {/* Results */}
         {result && urgencyCfg && (
           <View style={styles.results}>
-            {/* Urgency banner */}
             <View style={[styles.urgencyBanner, { backgroundColor: urgencyCfg.bg }]}>
               <Text style={styles.urgencyEmoji}>{urgencyCfg.emoji}</Text>
               <View style={{ flex: 1 }}>
@@ -223,7 +200,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
               </View>
             </View>
 
-            {/* Probable conditions */}
             {result.probableConditions.length > 0 && (
               <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                 <Text style={[styles.cardTitle, { color: colors.text }]}>Possible conditions</Text>
@@ -247,7 +223,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
               </View>
             )}
 
-            {/* Recommended actions */}
             {result.recommendedActions.length > 0 && (
               <View style={[styles.card, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                 <Text style={[styles.cardTitle, { color: colors.text }]}>Recommended actions</Text>
@@ -260,7 +235,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
               </View>
             )}
 
-            {/* Disclaimer */}
             <View style={[styles.disclaimer, { backgroundColor: colors.surface, borderColor: colors.border }]}>
               <Text style={styles.disclaimerIcon}>⚕️</Text>
               <Text style={[styles.disclaimerText, { color: colors.placeholder }]}>
@@ -274,8 +248,6 @@ const SymptomCheckerScreen: React.FC<Props> = ({ onBack }) => {
     </KeyboardAvoidingView>
   );
 };
-
-// ─── Styles ───────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
